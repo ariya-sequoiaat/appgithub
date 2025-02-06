@@ -101,27 +101,49 @@ make clean
 
 
 File Structure
+
 cli-app
-├── Dockerfile               # Docker setup file
-├── Makefile                 # Make commands for building and running
-├── README.md                # Project documentation
-├── cli_app                  # Core application files
+
+├── Dockerfile                  # Docker setup file
+
+├── Makefile                    # Make commands for building and running
+
+├── README.md                   # Project documentation
+
+├── cli_app                     # Core application files
+
 │   ├── __init__.py
-│   ├── csv_handler.py       # Handles CSV file operations
-│   ├── git_hub_app.py       # Contains logic for interacting with GitHub API
-│   ├── input.json           # Example input file (GitHub username & repository)
-│   ├── logger.py            # Logging utility
-│   ├── main.py              # Main entry point of the application
-│   └── validators.py        # Validation logic for inputs
-├── docker-compose.yml       # Docker Compose file
-├── pyproject.toml           # Python project setup file
-└── tests                    # Unit tests
+
+│   ├── csv_handler.py          # Handles CSV file operations
+
+│   ├── git_hub_app.py          # Contains logic for interacting with GitHub API
+
+│   ├── input.json              # Example input file (GitHub username & repository)
+
+│   ├── logger.py               # Logging utility
+
+│   ├── main.py                 # Main entry point of the application
+
+│   └── validators.py           # Validation logic for inputs
+
+├── docker-compose.yml          # Docker Compose file
+
+├── pyproject.toml              # Python project setup file
+
+└── tests                       # Unit tests
+
     ├── __init__.py
-    ├── test_csv_handler.py  # Unit tests for CSV handler
-    ├── test_git_hub_app.py  # Unit tests for GitHub API interaction
-    ├── test_logger.py       # Unit tests for logger
-    ├── test_main.py         # Unit tests for main app functionality
-    └── test_validators.py   # Unit tests for validators
+
+    ├── test_csv_handler.py     # Unit tests for CSV handler
+
+    ├── test_git_hub_app.py     # Unit tests for GitHub API interaction
+
+    ├── test_logger.py          # Unit tests for logger
+
+    ├── test_main.py            # Unit tests for main app functionality
+
+    └── test_validators.py      # Unit tests for validators
+    
 
 Conclusion
 This CLI app allows you to fetch useful repository details from GitHub and save them in a CSV format. By using Docker or Makefile, you can easily set up and run the application in a containerized environment or locally. Don't forget to set your GitHub PAT to avoid rate limits when accessing GitHub's API.
