@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  aryaapp:
+    image: aryaapp:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aryaapp_container
+    volumes:
+      - ./cli_app:/app/cli_app
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}  # Pass GitHub token as an environment variable
+    restart: always
+    stdin_open: true  # Allows interactive shell
+    tty: true         # Keeps shell open
+    entrypoint: ["python", "-m", "cli_app.main", "cli_app/input.json"]

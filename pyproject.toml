@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "cli-app"
+version = "0.1.0"
+description = "A CLI App to fetch GitHub repository details"
+authors = ["ariya-sequoiaat <ariya@sequoiaat.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+pytest = "^8.3.4"
+docker = "^7.1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+github-cli = "cli_app.main:main"
